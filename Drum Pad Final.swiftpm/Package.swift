@@ -35,13 +35,13 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/AudioKit/AudioKitUI", .exact("0.1.4"))
+        .package(url: "https://github.com/AudioKit/AudioKitUI", .exact("0.1.5"))
     ],
     targets: [
         .executableTarget(
             name: "AppModule",
             dependencies: [
-                .product(name: "AudioKitUI", package: "AudioKitUI")
+                .product(name: "AudioKitUI", package: "audiokitui")
             ],
             path: ".",
             resources: [
