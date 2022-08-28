@@ -84,6 +84,11 @@ class Conductor: ObservableObject {
         engine.output = mixer
         
         drumPadTouchCounts = Array(repeating: 0, count: drumSamples.count)
+        
+        // initialize effects
+        reverb.dryWetMix = reverbMix / 100.0
+        delay.dryWetMix = delayMix
+        delay.feedback = delayFeedback
     }
     
     func start() {
